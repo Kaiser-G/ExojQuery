@@ -31,6 +31,10 @@
 	</div>
 
 
+	<p>Type d'évènement : <span id="event"></span></p>
+
+	<p>Position de la souris : <span></span> </p>
+
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -44,24 +48,13 @@
 		$(document).ready(function () {
 			// alert("La page est chargée avec la version :" + $.fn.jquery);
 			// alert("cache tous les paragraphes");
-			$("p").hide();
 
-			// alert("Affiche uniquement le paragraphe p1");
-			$("#p1").show();
+			$(document).mousemove(function (event) {
+				$("span").text("Axe x : " + event.pageX + " , " + "Axe Y : " + event.pageY);
 
-			// alert("changer le texte du p1");
-			$("#p1").text("changer le texte du paragraphe p1.");
+				$("#event").html("Event : " + event.type);
 
-			// alert("Affichez le contenu du paragraphe « p2 » (HTML compris)" + $("#p2").html());
-
-			//Ajoutez une image aux éléments qui ont la classe « titre »
-			$(".titre").append("<img src='images/afpa.jpg'/>");
-
-			$("p").click(function () {
-				alert("Cliqué");
-				$(this).hide();
-			})
-
+			});
 
 		});
 
