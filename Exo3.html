@@ -4,13 +4,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Exercice 1 : Prise en main de jQuery</title>
+	<title>Exo 3</title>
 	<link rel="stylesheet" href="">
 </head>
 
 <body>
 
-	<h1>Exercice 1 : Prise en main de jQuery</h1>
+
+	<h1>Exercice 3</h1>
 
 
 	<div>
@@ -32,8 +33,7 @@
 
 
 
-
-	<script src="jquery-3.7.1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script>
 		//		// En JAVASCRIPT PUR syntaxe du programme principal
 		//		window.addEventListener('load', (event) => {
@@ -42,22 +42,26 @@
 		//		});
 		// Le programme PRINCIPAL
 		$(document).ready(function () {
-			// alert("La page est chargée et utilise la version : " + $.fn.jquery);
-
-
-			alert("cache tous les paragraphes");
+			// alert("La page est chargée avec la version :" + $.fn.jquery);
+			// alert("cache tous les paragraphes");
 			$("p").hide();
 
-			alert("Affiche uniquement le paragraphe p1");
+			// alert("Affiche uniquement le paragraphe p1");
 			$("#p1").show();
 
-			alert("changer le texte du p1");
+			// alert("changer le texte du p1");
 			$("#p1").text("changer le texte du paragraphe p1.");
 
-			alert("Affichez le contenu du paragraphe « p2 » (HTML compris)" + $("#p2").html());
+			// alert("Affichez le contenu du paragraphe « p2 » (HTML compris)" + $("#p2").html());
 
 			//Ajoutez une image aux éléments qui ont la classe « titre »
 			$(".titre").append("<img src='images/afpa.jpg'/>");
+
+			$("p").click(function () {
+				alert("Cliqué");
+				$(this).hide();
+			})
+
 
 		});
 
