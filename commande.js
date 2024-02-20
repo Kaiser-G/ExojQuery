@@ -3,9 +3,11 @@
 $(document).ready(function () {
   //alert("La page est chargée avec la version :" + $.fn.jquery);
 
+  $("#h2").css({ color: "red", "text-align": "center", "font-size": "2em" });
+
   // initialise tous les composant
   function onBtnClickAjout() {
-    alert("click");
+    // alert("click");
 
     $("#idtable tr:last").css({ color: "grey" });
 
