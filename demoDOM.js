@@ -4,23 +4,15 @@ $(document).ready(function () {
   // alert("La page est chargée avec la version :" + $.fn.jquery);
 
   function onBtnClickFirst() {
-    $("#divtest").before(
-      $("#nouveau").val("ajouter un nouvel élément en début de liste")
-    );
+    $("#divtest").before("ajouter un nouvel élément en début de liste");
   }
   function onBtnClickBefore() {
-    $("#p2").before(
-      $("#nouveau").val(
-        "ajouter un nouvel élément avant un élément de la liste"
-      )
-    );
+    $("#p2").before("ajouter un nouvel élément avant un élément de la liste");
   }
 
   function onBtnClickAfter() {
     $("#pcible").after(
-      $("#nouveau").val(
-        "ajouter un nouvel élément après un élément de la liste"
-      )
+      "ajouter un nouvel élément après un élément de la liste"
     );
   }
   function onBtnClickRemove() {
