@@ -14,13 +14,13 @@
 	<h1>Exercice 7</h1>
 
 
-	<p>Je dois devenir bleu</p>
-	<p>je dois devenir bleu sur fond jaune</p>
+	<p id="p1">Je dois devenir bleu</p>
+	<p id="p2">je dois devenir bleu sur fond jaune</p>
 	<p>Je reste sans style : noir sur fond blanc</p>
 
 
 
-
+	<a href="index.html">retour</a>
 
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -33,8 +33,11 @@
 		// Le programme PRINCIPAL
 		$(document).ready(function () {
 			// alert("La page est chargée avec la version :" + $.fn.jquery);
-			//alert("Attention !!");
+			alert("Attention !!");
 
+			$("#p1").css({ "color": "blue", "font-size": "1.5em" });
+
+			$("#p2").css({ "background-color": "yellow", "color": "blue", "font-size": "2em" });
 
 		});
 
